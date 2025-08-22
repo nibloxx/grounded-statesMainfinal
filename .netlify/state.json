@@ -1,0 +1,20 @@
+{
+	"geolocation": {
+		"data": {
+			"city": "Ermont",
+			"country": {
+				"code": "FR",
+				"name": "France"
+			},
+			"subdivision": {
+				"code": "IDF",
+				"name": "Île-de-France"
+			},
+			"timezone": "Europe/Paris",
+			"latitude": 48.9948,
+			"longitude": 2.257,
+			"postalCode": "95120"
+		},
+		"timestamp": 1755600839678
+	}
+}
