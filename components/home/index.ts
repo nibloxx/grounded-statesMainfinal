@@ -1,0 +1,10 @@
+export { default as Hero } from './Hero';
+export { default as PropertyGallery } from './PropertyGallery';
+export { default as PropertyCard } from './PropertyCard';
+export { default as ProjectsSection } from './ProjectsSection';
+export { default as ProjectCard } from './ProjectCard';
+export { default as WelcomeSection } from './WelcomeSection';
+export { default as CommunitySection } from './CommunitySection';
+export { default as CommunityHero } from './CommunityHero';
+export { default as PeacefulnessSection } from './PeacefulnessSection';
+export { default as LuxuryDetailsSection } from './LuxuryDetailsSection'; 
