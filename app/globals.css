@@ -1,0 +1,473 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Swiper CSS */
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+
+/* Safari/Chrome compatibility fixes */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scrollbar-gutter: stable;
+}
+
+:root {
+  --background: #f9f8f4;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #f9f8f4;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  /* Custom cursor for project cards */
+  .cursor-open {
+    cursor: url("/cursor-open.svg") 30 30, pointer;
+  }
+
+  /* Alternative cursor with better browser support */
+  .cursor-open:hover {
+    cursor: url("/cursor-open.svg") 30 30, pointer;
+  }
+}
+
+/* Helvetica font */
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("/fonts/helvetica-neue/HelveticaNeueLight.otf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("/fonts/helvetica-neue/HelveticaNeueBold.otf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("/fonts/helvetica-neue/HelveticaNeueMedium.otf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MADE Mirage";
+  src: url("/fonts/made_mirage/MADE Mirage Thin PERSONAL USE.otf")
+    format("opentype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MADE Mirage';
+  src: url('/fonts/made_mirage/MADE Mirage Regular PERSONAL USE.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MADE Mirage";
+  src: url("/fonts/made_mirage/MADE Mirage Medium PERSONAL USE.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MADE Mirage";
+  src: url("/fonts/made_mirage/MADE Mirage Bold PERSONAL USE.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MADE Mirage";
+  src: url("/fonts/made_mirage/MADE Mirage Black PERSONAL USE.otf")
+    format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* GFS Didot font styling */
+.gfs-didot-regular {
+  font-family: var(--font-gfs-didot), "GFS Didot", serif;
+  font-weight: 400;
+}
+.gfs-didot-regular-italic {
+  font-family: var(--font-gfs-didot), "GFS Didot", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+.gfs-didot-bold {
+  font-family: var(--font-gfs-didot), "GFS Didot", serif;
+  font-weight: 700;
+}
+
+/* Montserrat font utility classes */
+.montserrat-thin {
+  font-family: var(--font-montserrat), "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.montserrat-light {
+  font-family: var(--font-montserrat), "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.montserrat-regular {
+  font-family: var(--font-montserrat), "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.montserrat-medium {
+  font-family: var(--font-montserrat), "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.montserrat-semibold {
+  font-family: var(--font-montserrat), "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.montserrat-bold {
+  font-family: var(--font-montserrat), "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.montserrat-extrabold {
+  font-family: var(--font-montserrat), "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.montserrat-black {
+  font-family: var(--font-montserrat), "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Libre Baskerville font utility classes */
+.libre-baskerville-regular {
+  font-family: var(--font-libre-baskerville), "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.libre-baskerville-bold {
+  font-family: var(--font-libre-baskerville), "Libre Baskerville", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.libre-baskerville-regular-italic {
+  font-family: var(--font-libre-baskerville), "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Custom heading styles for PropertyGallery */
+.property-gallery-heading {
+  font-family: var(--font-gfs-didot), "GFS Didot", serif;
+  font-size: 40px;
+  line-height: 60px;
+  letter-spacing: -0.01em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Custom Swiper Styles */
+.property-swiper {
+  padding-bottom: 60px;
+}
+
+.property-swiper .swiper-slide {
+  height: auto;
+}
+
+.property-swiper .swiper-pagination {
+  position: relative;
+  bottom: 0;
+  width: auto;
+}
+
+.property-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #9ca3af;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.property-swiper .swiper-pagination-bullet-active {
+  background: #6b7280;
+  transform: scale(1.2);
+}
+
+/* Hide default Swiper navigation buttons */
+.property-swiper .swiper-button-next,
+.property-swiper .swiper-button-prev {
+  display: none;
+}
+
+/* Projects Slider Styles */
+.projects-swiper {
+  overflow: visible;
+}
+
+.projects-swiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+.projects-swiper .swiper-slide {
+  height: auto;
+  display: flex;
+}
+
+.projects-swiper .swiper-slide > div {
+  width: 100%;
+  height: 100%;
+}
+
+/* Show navigation buttons on hover */
+.projects-swiper:hover .projects-swiper-prev,
+.projects-swiper:hover .projects-swiper-next {
+  opacity: 1;
+}
+
+/* Custom Swiper Styles */
+.custom-swiper {
+  overflow: hidden;
+  padding: 0 20px;
+  margin: 0 -20px;
+}
+
+.custom-swiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+.custom-swiper .swiper-slide {
+  height: auto;
+  display: flex;
+}
+
+.custom-swiper .swiper-slide > div {
+  width: 100%;
+  height: 100%;
+}
+
+/* Projects specific slider styles */
+.projects-swiper {
+  overflow: hidden;
+  /* padding: 0 20px; */
+  /* margin: 0 -20px; */
+  width: 100%;
+}
+
+.projects-swiper .swiper-wrapper {
+  align-items: stretch;
+  width: 100%;
+}
+
+.projects-swiper .swiper-slide {
+  height: auto;
+  display: flex;
+  width: auto;
+}
+
+.projects-swiper .swiper-slide > div {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+}
+
+/* Property Gallery specific slider styles */
+.property-gallery-swiper {
+  overflow: hidden;
+  padding: 0 25px;
+  margin: 0 -25px;
+  width: 100%;
+}
+
+.property-gallery-swiper .swiper-wrapper {
+  align-items: stretch;
+  width: 100%;
+}
+
+.property-gallery-swiper .swiper-slide {
+  height: auto;
+  display: flex;
+  width: auto;
+}
+
+.property-gallery-swiper .swiper-slide > div {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+}
+
+/* Global Image Text Fill Classes */
+.text-fill-image {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.text-fill-text-bg-all-devices {
+  background-image: url("/images/text-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #313131;
+}
+/* Responsive text fill - only on medium and above */
+@media (min-width: 768px) {
+  .text-fill-text-bg {
+    background-image: url("/images/text-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #313131;
+  }
+}
+
+/* Custom image text fill with any image */
+.text-fill-text-bg-1 {
+  background-image: url("/images/communities/community-1.jpg");
+  background-size: cover;
+  background-position: bottom;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+/* Custom image text fill with any image */
+.text-fill-text-bg-dubai {
+  background-image: url("/images/gallery/dubai.jpg");
+  background-size: contain;
+  background-position: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Dynamic text fill for UltimateLocationSlider */
+.text-fill-dynamic {
+  background-size: cover;
+  background-position: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.swiper-container {
+  overflow: visible;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.bg-inverted {
+  background-image: url("/images/footer-bg.svg");
+  background-color: #f3eee7;
+  /* filter: invert(%); */
+}
+
+/* .skin-shade-overlay {
+  background: #f4f0ea;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+} */
+
+.property-gallery-slider {
+  width: 100vw !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.property-gallery-slider .slick-track {
+  display: flex !important;
+  align-items: stretch;
+}
+
+.property-gallery-slider .slick-slide {
+  height: auto !important;
+  display: flex !important;
+}
+
+.property-gallery-slider .slick-slide > div {
+  width: 100% !important;
+  height: 100% !important;
+}
+.marquee-slider .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.footeer {
+  background-color: #f3eee7;
+  background-image: url("/images/footer.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.community-df {
+  background-image: url("/images/footer.svg");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
