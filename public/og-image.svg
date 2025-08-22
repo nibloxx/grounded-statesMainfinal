@@ -1,0 +1,9 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1200" height="630" fill="#F9F8F4"/>
+<g transform="translate(500, 215)">
+  <circle cx="100" cy="100" r="80" fill="none" stroke="#313131" stroke-width="8"/>
+  <path d="M100 180C139.764 180 172 147.764 172 108C172 68.2355 139.764 36 100 36C82.3268 36 66.0817 42.6863 53.7258 54.0426L70.6213 70.9381C77.9032 63.6562 87.9032 59.6429 99.4286 59.6429C122.622 59.6429 141.429 78.4494 141.429 101.643V110.357C141.429 133.551 122.622 152.357 99.4286 152.357C87.9032 152.357 77.9032 148.344 70.6213 141.062L53.7258 157.957C66.0817 169.314 82.3268 180 100 180Z" fill="#313131"/>
+</g>
+<text x="600" y="420" text-anchor="middle" font-family="serif" font-size="36" fill="#313131">Grounded Estates</text>
+<text x="600" y="460" text-anchor="middle" font-family="serif" font-size="18" fill="#646361">Boutique Developer Creating Unforgettable Destinations</text>
+</svg>
